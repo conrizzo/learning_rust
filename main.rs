@@ -16,6 +16,6 @@ fn add() {
 
 
 fn main() {
-    println!("Hello, world!");
+    println!("main function!");
     add()
 }
