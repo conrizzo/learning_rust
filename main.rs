@@ -10,7 +10,7 @@ fn add() {
 
     let sum = total_amount_paid - total_amount_due;
 
-    println!("Sum of a and b = {}", sum);
+    println!("test addition function = {}", sum);
 }
 
 
