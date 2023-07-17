@@ -17,16 +17,27 @@ struct Item {
 }
 
 fn make_grid(){
-    let rows = 20;
-    let cols = 20;
+    let rows = 8;
+    let cols = 8;
 
-    // create a 2D grid of integers with a size of 3x3
-    let grid = vec![vec![0; cols]; rows];
+    // create a 2D grid of characters with a size of 8x8
+    let mut grid = vec![vec![' '; cols]; rows];
 
-    // print the grid
-    for row in &grid {
-        println!("{:?}", row);    }
+    // add the letter "p" to all cells in the second row
 
+    let first_row = ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'];
+    let last_row = ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'];
+    for col in 0..cols {
+        grid[0][col] = first_row[col];
+        grid[1][col] = 'p';
+        grid[6][col] = 'p';
+        grid[7][col] = last_row[col];
+    }
+
+// print the grid
+for row in &grid {
+    println!("{:?}", row);
+}
 }
 
 fn make_item(){
